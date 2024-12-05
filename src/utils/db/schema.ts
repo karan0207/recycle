@@ -45,3 +45,20 @@ export const Rewards = pgTable('rewards', {
   collectionInfo: text('collection_info').notNull(),
 });
 
+export const CollectedWaste= pgTable("collected_waste", {
+id: serial("id").primaryKey(),
+reportId: integer("report_id").references(() => Reports.id).notNull(),
+collectorId: integer('collector_id').references(() => Users.id).notNull(),
+collectionDate: timestamp("collection_date").notNull(),
+status: varchar("status", { length:255}).notNull().default('collected')
+})
+
+export const Notifications= pgTable("notifications", {
+    id: serial("id").primaryKey(),
+    userId: integer('user_id').references(() => Users.id).notNull(),
+    message: text("message").notNull(),
+    type: varchar("type",{length:255}).notNull(),
+    isRead: boolean("is_read").notNull().default(false),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+}
+)
