@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && eslint '**/*.{ts,tsx}'",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
@@ -14,7 +15,7 @@
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.37.0",
-    "lucide-react": "^0.466.0",
+    "lucide-react": "^0.468.0",
     "next": "14.2.18",
     "react": "^18",
     "react-dom": "^18",
@@ -25,12 +26,17 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
     "drizzle-kit": "^0.29.1",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.18",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "postcss": "^8",
+    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.19.2",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }
