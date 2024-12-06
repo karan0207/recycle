@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && eslint '**/*.{ts,tsx}'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "db:push":"drizzle-kit push",
+    "db:studio":"npx drizzle-kit studio"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
